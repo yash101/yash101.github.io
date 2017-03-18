@@ -40,6 +40,7 @@
 				data: null,
 				success: function(success) {
 					$("#body").html(success);
+					jQuery.getScript("js/" + location + ".js");
 					if(skip == null || skip) {
 						$("html, body").animate({
 							scrollTop: max(0, $("#body").offset().top - 64)
