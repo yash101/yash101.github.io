@@ -40,7 +40,7 @@ body > #home #details {
 }
 
 body > #home #details * {
-	font-family: 'Griffy', cursive;
+	font-family: 'Amatic SC', cursive;
 }
 
 body > #home #details #picture {
@@ -117,9 +117,10 @@ body > #home #details #continue {
 	height: 64px;
 	line-height: 64px;
 	background-color: #C6C6C6;
-	color: #FF1493;
+	color: #183F5F;
 	border-radius: 8px;
 	text-decoration: none;
+	padding-top: 0px;
 }
 
 body > #home #details #continue:hover {
@@ -132,13 +133,14 @@ body > #menu > * {
 	height: 64px;
 	min-width: 64px;
 	word-spacing: 0px;
-	color: #FF1493;
+	color: #B9C5CF;
 	margin: 0px;
 	text-align: center;
 	line-height: 64px;
 	padding-left: 8px;
 	padding-right: 8px;
-	font-family: 'Griffy', cursive;
+	font-weight: bold;
+	font-family: 'Amatic SC', cursive;
 	text-decoration: none;
 }
 
@@ -154,7 +156,7 @@ body > #body {
 }
 
 body > #body * {
-	font-family: 'Harmattan', sans-serif;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 @media(max-width: 425px) {
@@ -174,4 +176,8 @@ body > #body * {
 	body > #body hr {
 		max-width: 300px;
 	}
+}
+
+a {
+	color: #333B42;
 }
