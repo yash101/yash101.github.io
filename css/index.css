@@ -55,7 +55,7 @@ body > #home #details #picture {
 		position: fixed;
 		top: 0px;
 		left: 0px;
-		background-color: black;
+		background-color: rgba(0, 0, 0, 0.8);
 		margin: 0px;
 		text-align: center;
 	}
@@ -78,7 +78,7 @@ body > #home #details #picture {
 		position: fixed;
 		top: 0px;
 		left: 0px;
-		background-color: black;
+		background-color: rgba(0, 0, 0, 0.8);
 		margin: 0px;
 		text-align: right;
 		padding-right: 16px;
@@ -124,7 +124,7 @@ body > #home #details #continue {
 }
 
 body > #home #details #continue:hover {
-	background-color: #C6C6C6;
+	background-color: #FFFFFF;
 	color: black;
 }
 
