@@ -71,7 +71,10 @@ var scrollToBody = null;
 
 		(function() {
 			var hash = window.location.hash;
-			if(!hash) return;
+			if(!hash) {
+				to("projects", false);
+				return;
+			}
 			if(hash[0] == '#') hash = hash.substring(1, hash.length);
 			if(hash != "")
 				to(hash, true);
