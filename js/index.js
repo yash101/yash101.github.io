@@ -15,6 +15,8 @@ var scrollToBody = null;
     };
 
     $(document).ready(function() {
+        pperf();
+        
         var danger = null;
         $(document).ready(function ready() {
             $.ajax({
