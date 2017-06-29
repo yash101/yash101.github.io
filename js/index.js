@@ -9,8 +9,7 @@ var scrollToBody = null;
         var perf = {};
         var start = window.performance.navigationStart;
         
-        for(var k in window.performance) {
-            console.log(typeof(window.performance[k]));
+        for(var k in window.performance.timing) {
             if(typeof(window.performance.timing[k]) == "number")
                 perf[k] = window.performance.timing[k] - start;
         }
