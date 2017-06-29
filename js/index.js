@@ -7,7 +7,7 @@ var scrollToBody = null;
             return -1;
         }
         var perf = {};
-        var start = window.performance.navigationStart;
+        var start = window.performance.timing.navigationStart;
         
         for(var k in window.performance.timing) {
             if(typeof(window.performance.timing[k]) == "number")
