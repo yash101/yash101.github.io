@@ -4,11 +4,14 @@ var scrollToBody = null;
     var pperf = function pperf() {
         if(!window.performance) {
             console.info("window.Performance is not supported by your browser");
+            return -1;
         }
-        var perf = window.performance.timing;
-        var start = perf.navigationStart;
-        for(var k in perf) {
-            perf[k] -= start;
+        var perf = {};
+        var start = window.performance.navigationStart;
+        
+        for(var k in window.performance) {
+            if(typeof(window.performance[k] != "number") continue;
+            perf[k] = window.performance[k] - start;
         }
         
         console.info(perf);
