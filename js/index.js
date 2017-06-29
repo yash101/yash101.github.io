@@ -11,8 +11,8 @@ var scrollToBody = null;
         
         for(var k in window.performance) {
             console.log(typeof(window.performance[k]));
-            if(typeof(window.performance[k]) == "number")
-                perf[k] = window.performance[k] - start;
+            if(typeof(window.performance.timing[k]) == "number")
+                perf[k] = window.performance.timing[k] - start;
         }
         
         console.info(perf);
