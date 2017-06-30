@@ -23,6 +23,7 @@ var scrollToBody = null;
             pperf.entries = {};
             var ents = window.performance.getEntries();
             for(var i = 0; i < ents.length; i++) {
+                pperf.entries[i] = {};
                 pperf.entries[i].name = ents[i].name;
                 pperf.entries[i].dnsTime = ents[i].domainLookupEnd - ents[i].domainLookupStart;
                 pperf.entries[i].tcpConnectionTime = ents[i].connectEnd - ents[i].connectStart;
@@ -35,6 +36,7 @@ var scrollToBody = null;
         {
             var ents = window.performance.getEntries();
             for(var i = pperf.entries.length; i < ents.length; i++) {
+                pperf.entries[i] = {};
                 pperf.entries[i].name = ents[i].name;
                 pperf.entries[i].dnsTime = ents[i].domainLookupEnd - ents[i].domainLookupStart;
                 pperf.entries[i].tcpConnectionTime = ents[i].connectEnd - ents[i].connectStart;
