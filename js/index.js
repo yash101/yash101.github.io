@@ -46,7 +46,9 @@ var scrollToBody = null;
             }
         }
         
-        console.info(pperf);
+        perf.resources = pperf;
+        
+        console.info(perf);
     };
 
     $(document).ready(function() {
