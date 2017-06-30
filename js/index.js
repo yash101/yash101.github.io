@@ -46,7 +46,7 @@ var scrollToBody = null;
             }
         }
         
-        perf.resources = pperf;
+        perf.resources = pperf.entries;
         
         console.info(perf);
     };
