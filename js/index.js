@@ -1,59 +1,7 @@
 ;var to = null;
 var scrollToBody = null;
 (function init() {
-    var pperf = function pperf() {
-        if(!window.performance) {
-            console.info('window.Performance is not supported by your browser');
-            return -1;
-        }
-        var perf = {};
-        var start = window.performance.timing.navigationStart;
-        
-        perf.mainPagePerformance = {};
-        perf.mainPagePerformance.dnsTime = window.performance.timing.domainLookupEnd - window.performance.domainLookupStart;
-        perf.mainPagePerformance.tcpConnectionTime = window.performance.timing.connectEnd - window.performance.timing.connectStart;
-        perf.mainPagePerformance.ttfb = window.performance.timing.responseStart - window.performance.timing.startTime;
-        perf.mainPagePerformance.transferTime = window.performance.timing.responseEnd - window.performance.timing.responseStart;
-        perf.mainPagePerformance.total = window.performance.timing.responseEnd - window.performance.timing.startTime;
-        
-        
-        //If initializing:
-        if(!pperf.entries)
-        {
-            pperf.entries = {};
-            var ents = window.performance.getEntries();
-            for(var i = 0; i < ents.length; i++) {
-                pperf.entries[i] = {};
-                pperf.entries[i].name = ents[i].name;
-                pperf.entries[i].dnsTime = ents[i].domainLookupEnd - ents[i].domainLookupStart;
-                pperf.entries[i].tcpConnectionTime = ents[i].connectEnd - ents[i].connectStart;
-                pperf.entries[i].ttfb = ents[i].responseStart - ents[i].responseEnd;
-                pperf.entries[i].transferTime = ents[i].responseEnd - ents[i].responseStart;
-                pperf.entries[i].total = ents[i].responseEnd - ents[i].startTime;
-            }
-        }
-        else
-        {
-            var ents = window.performance.getEntries();
-            for(var i = pperf.entries.length; i < ents.length; i++) {
-                pperf.entries[i] = {};
-                pperf.entries[i].name = ents[i].name;
-                pperf.entries[i].dnsTime = ents[i].domainLookupEnd - ents[i].domainLookupStart;
-                pperf.entries[i].tcpConnectionTime = ents[i].connectEnd - ents[i].connectStart;
-                pperf.entries[i].ttfb = ents[i].responseStart - ents[i].responseEnd;
-                pperf.entries[i].transferTime = ents[i].responseEnd - ents[i].responseStart;
-                pperf.entries[i].total = ents[i].responseEnd - ents[i].startTime;
-            }
-        }
-        
-        perf.resources = pperf.entries;
-        
-        console.info(perf);
-    };
-
     $(document).ready(function() {
-        pperf();
-        
         var danger = null;
         $(document).ready(function ready() {
             $.ajax({
